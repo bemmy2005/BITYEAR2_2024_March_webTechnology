@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Constructor</title>
+
+	<!-- Script in charge of js -->
+	<script type="text/javascript">
+		function student(Fname, Lname, Id, mEnglish,mSE,mBE,mF){
+		this.fname=Fname;
+		this.lname=Lname;
+		this.id=ID;
+		this.marksE=mEnglish;
+		this.marksSE=mSE;
+		this.markBE=mBE;
+		this.marksF=mF;
+		this.calculateAverage=function(){
+			return (this.marksE+
+				    this.marksSE+
+				    this.markBE+
+				    this.marksF)/4;
+		};
+		this.displayDetails=function{
+			var avg=this.calculateAverage();
+		document.write("Student id: "+this.id+"names: "+this.fname +" "+this.lname+" Average marks: "+avg+"</br></br>");
+		//var avg=this.calculateAverage();
+		//document.write("Average marks: "+avg+"</br></br>");
+		};
+		var st1 = new student("Peter", "Kubwayo", 1, 78,90,76,60);
+		st1.displayDetails();
+		}
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
